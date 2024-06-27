@@ -33,6 +33,9 @@ The next step was to switch from using classification to using regression instea
 
 Finally, we increased the number of epochs done during the training of the models and satisfying results were finally achieved. In order to access our results, 3 different models were trained using both classification and regression. The first model was a simple custom CNN, which was mostly used as a control, and produced the worst results. The other two, were pre-trained models, VGG16 and ResNet18, which achieved significantly better results.
 
+![Screenshot from 2024-06-27 19-39-16](https://github.com/m21ark/vc_t2/assets/72521279/8a5453f5-b5d5-47d8-952b-d5945f4a7ee3)
+
+
 ## Lego Detection
 
 The team explored, for the purpose of lego detection using bounding boxes, two different already pre-trained CNN models: `YOLOV8` from *Ultralytics* and `Faster R-CNN`.
@@ -43,6 +46,13 @@ The models were fine-tuned on our dataset for 5 epochs (due to time and hardware
 We explored many alternatives, including applying CNNs to each bounding box to extract the foreground. The CNN approach is quite expensive in terms of both memory and computational resources and the results were very poor because we didn’t have a way to train them due to lack of ground truth masks. The team experimented with pre-trained `U-Net` and `Mask R-CNN`, with the first yielding unusable masks almost 100% of the time.
 
 The second fared a bit better, but still failed to be consistent by sometimes not detecting anything as foreground or giving badly defined lego shapes. In 30 bounding box images, Mask R-CNN only gave masks different than blank to less than a third, making it an unreliable solution.
+
+![SEGMENTATION 1](https://github.com/m21ark/vc_t2/assets/72521279/fbcdf878-7535-4c01-8cbc-6f1a3d28422d)
+
+![Screenshot from 2024-06-27 19-39-57](https://github.com/m21ark/vc_t2/assets/72521279/08ed5fb6-0f95-41d3-a982-f171355e3c84)
+
+![Screenshot from 2024-06-27 19-40-05](https://github.com/m21ark/vc_t2/assets/72521279/c5f79445-dab2-463f-8924-6f9f4a917f2d)
+
 
 ## Group Members
 
